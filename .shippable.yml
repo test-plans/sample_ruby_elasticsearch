@@ -1,0 +1,16 @@
+language: ruby
+ruby:
+  - 2.0.0
+services:
+  - elasticsearch
+env:
+  global:
+    - ELASTICSEARCH_HOST=localhost
+    - ELASTICSEARCH_PORT=$SHIPPABLE_ES_PORT
+    - CI_REPORTS=shippable/testresults
+before_script:
+  - ruby app.rb 2>&1 > /dev/null &
+script:
+  - bundle exec rake test
+after_script:
+  - killall -9 ruby
