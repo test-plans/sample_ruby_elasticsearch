@@ -13,7 +13,7 @@ A sample project that shows you how to test a ruby webapp that uses Elasticsearc
 1. Enable it
 1. Run it
 
-The project comes with a working `.shippable.yml` file.
+The project comes with a working `shippable.yml` file.
 
 ## How to run this locally
 1. Get an Elasticsearch server running locally. If you have Docker, this is all you need to do:
@@ -26,5 +26,5 @@ The project comes with a working `.shippable.yml` file.
    ELASTIC_SEARCH_PORT=9200 ELASTIC_SEARCH_HOST=localhost ruby app.rb
    ````
 
-1. Run the tests with `bundle exec rake tests`
+1. Run the tests with `bundle exec rake test`
 
