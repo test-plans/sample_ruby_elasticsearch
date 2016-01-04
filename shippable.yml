@@ -9,8 +9,11 @@ env:
     - ELASTICSEARCH_HOST=localhost
     - ELASTICSEARCH_PORT=$SHIPPABLE_ES_PORT
     - CI_REPORTS=shippable/testresults
+    - secure: P9LH9CAErZzlXZti56jmju27iGvfVYkaaEEgwab3OEjsDVuhnRQfjY/Ao3epoebXitVSb5Xd+VXT8WL0YA6b94p2a6kvVnk9sZJkR7oeCWHuZ6OA1ojUGOwIN2ZHJj7Cg0bcjDqXmcltY4sam2nBvdscmpfipS8sc1NF/LbkbV8xfHNSBh4eqPW+bi9b6rWgqyxD+SP8iN1+b2dr15aH1QEIY7RV6JS3lnCLAc+Iwg07hA4whE+J5NfPyJgv+bxJPlTGh31B0pbqxyc8rU3GAGbfN1E6g5mgKHzZddqancg5kaKbwYNwIG66FUlmeDSW89EfB4hhNlB5q5FjCk/tEg==
 before_script:
   - ruby app.rb 2>&1 > /dev/null &
+  - echo $key1
+  
 script:
   - bundle exec rake test
 after_script:
