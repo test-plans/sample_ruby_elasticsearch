@@ -1,5 +1,7 @@
 language: ruby
 
+build_image: drydock/u12rubpls: tip
+
 ruby:
   - 2.0.0
 services:
@@ -14,6 +16,7 @@ before_script:
   - ruby app.rb 2>&1 > /dev/null &
   - echo $key1
   
+
 script:
   - bundle exec rake test
 after_script:
